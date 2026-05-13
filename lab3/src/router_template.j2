@@ -1,0 +1,9 @@
+hostname {{ router.hostname }}
+
+{% for iface in router.interfaces %}
+interface {{ iface.name }}
+ description {{ iface.description }}
+ ip address {{ iface.ip }} {{ iface.mask }}
+ no shutdown
+!
+{% endfor %}

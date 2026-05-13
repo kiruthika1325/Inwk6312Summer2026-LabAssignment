@@ -1,0 +1,14 @@
+hostname R2
+
+
+interface GigabitEthernet1.12
+ description Link to R1
+ ip address 155.1.12.2 255.255.255.0
+ no shutdown
+!
+
+interface Loopback0
+ description Router ID
+ ip address 150.1.2.2 255.255.255.255
+ no shutdown
+!
